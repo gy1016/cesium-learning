@@ -26,3 +26,5 @@ class MyPrimitive {
 var myPrimitive = new MyPrimitive();
 viewer.scene.primitives.add(myPrimitive);
 ```
+
+## 3. 屏幕空间误差——SSE
