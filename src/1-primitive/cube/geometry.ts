@@ -1,6 +1,6 @@
 import { BoundingSphere, ComponentDatatype, GeometryAttribute, GeometryAttributes, PrimitiveType } from 'cesium';
 
-class CubeGeometry {
+export class CubeGeometry {
   attributes: GeometryAttributes;
   indices?: Uint16Array;
   primitiveType: PrimitiveType;

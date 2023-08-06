@@ -30,17 +30,15 @@ export default class MyPrimitive {
     });
 
     var vs = `
-      attribute vec3 position;
+      in vec3 position;
       void main(){
-          gl_Position = czm_projection  * czm_modelView * vec4( position , 1. );
-      }
-      `;
+          gl_Position = czm_projection  * czm_modelView * vec4(position , 1.0);
+      }`;
     var fs = `
       uniform vec3 color;
       void main(){
-          gl_FragColor=vec4( color , 1. );
-      }
-      `;
+          out_FragColor=vec4(color , 1.0);
+      }`;
     var shaderProgram = Cesium.ShaderProgram.fromCache({
       context: context,
       vertexShaderSource: vs,

@@ -25,7 +25,7 @@ Matrix4.multiplyByUniformScale(
   modelMatrix
 ); // 缩放计算，矩阵·50w
 
-const cubeInstance2 = new GeometryInstance({
+const cubeInstance = new GeometryInstance({
   geometry: cubeGeometry,
   modelMatrix: modelMatrix,
   attributes: {
@@ -34,7 +34,7 @@ const cubeInstance2 = new GeometryInstance({
 });
 
 const cubePrimitive = new Primitive({
-  geometryInstances: [cubeInstance2],
+  geometryInstances: [cubeInstance],
   appearance: cubeAppearance,
   asynchronous: false,
 });
